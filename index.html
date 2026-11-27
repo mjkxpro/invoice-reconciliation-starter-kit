@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice Reconciliation Exception Checklist</title>
+  <meta name="description" content="A practical invoice and payment reconciliation checklist using clearly labelled synthetic data.">
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#596579; --accent:#155eef; --soft:#eef4ff; }
+    body { margin:0; font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#f7f9fc; }
+    main { max-width:820px; margin:0 auto; padding:48px 22px 64px; }
+    .card { background:white; border:1px solid #dbe2ee; border-radius:16px; padding:28px; box-shadow:0 8px 30px #1720330d; }
+    h1 { line-height:1.15; margin-top:0; font-size:clamp(2rem,5vw,3.2rem); }
+    h2 { margin-top:2rem; }
+    .note { background:var(--soft); border-left:4px solid var(--accent); padding:12px 16px; }
+    table { width:100%; border-collapse:collapse; margin:16px 0; }
+    th,td { text-align:left; border-bottom:1px solid #e5eaf2; padding:10px 8px; }
+    .button { display:inline-block; background:var(--accent); color:white; padding:12px 18px; border-radius:9px; text-decoration:none; font-weight:700; }
+    .muted { color:var(--muted); }
+    footer { margin-top:24px; color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card">
+      <p class="muted">Free practical guide for small businesses and bookkeepers</p>
+      <h1>Invoice-to-payment reconciliation exception checklist</h1>
+      <p>When invoice exports and payment exports do not line up, use this short workflow to separate clean matches from items that need review.</p>
+      <p class="note"><strong>Important:</strong> every example on this page is synthetic data, not a customer record. Do not upload personal, bank, or other sensitive information to public tools.</p>
+      <h2>Five checks before you call a payment matched</h2>
+      <table>
+        <thead><tr><th>Signal</th><th>Suggested handling</th></tr></thead>
+        <tbody>
+          <tr><td>Invoice reference and amount agree</td><td>Matched; retain the source references.</td></tr>
+          <tr><td>Amount is smaller than the invoice</td><td>Flag as underpaid or partial; do not silently close.</td></tr>
+          <tr><td>Amount is larger than the invoice</td><td>Flag as overpaid or combined; review allocation evidence.</td></tr>
+          <tr><td>No usable reference</td><td>Search by date, currency, and amount, then flag as unmatched if uncertain.</td></tr>
+          <tr><td>One payment covers several invoices</td><td>Require a documented allocation before marking the invoices settled.</td></tr>
+        </tbody>
+      </table>
+      <h2>Minimal review workflow</h2>
+      <ol>
+        <li>Normalize invoice IDs, dates, currency, and amounts.</li>
+        <li>Run exact reference-and-amount matching first.</li>
+        <li>Review partial, lump-sum, duplicate, and missing-reference exceptions.</li>
+        <li>Keep the source exports unchanged and record the reason for each decision.</li>
+      </ol>
+      <p><a class="button" href="https://mjkxpro.gumroad.com/l/lneeiam">Get the Invoice Reconciliation Starter Kit</a></p>
+      <p class="muted">The paid kit provides a reusable local workflow and templates. It does not provide accounting, tax, legal, or banking advice.</p>
+    </article>
+    <footer>Original educational content. Synthetic examples are labelled. No customer testimonials or performance claims are made.</footer>
+  </main>
+</body>
+</html>
